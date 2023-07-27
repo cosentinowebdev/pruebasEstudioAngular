@@ -1,0 +1,39 @@
+import { Injectable } from '@angular/core';
+
+@Injectable({
+  providedIn: 'root'
+})
+export class SettingService {
+
+
+  private linkTheme = document.querySelector(`#theme`);
+
+  constructor() { 
+    console.log('Setting service init');
+    const theme = localStorage.getItem('theme') || "blue";
+    const url = `./assets/css/colors/${theme}.css`;
+    console.log(url);
+    this.linkTheme?.setAttribute('href',url);
+  }
+
+  changeTheme(theme:string){
+
+    const url = `./assets/css/colors/${theme}.css`;
+    this.linkTheme?.setAttribute('href',url);
+    localStorage.setItem('theme',theme);
+    this.checkCurrentTheme();
+  }
+  checkCurrentTheme(){
+    const links: NodeListOf<Element> =document.querySelectorAll('.selector');
+    links.forEach(element => {
+      element.classList.remove('working');
+      const btnTheme =  element.getAttribute('data-theme');
+      const btnThemeUrl = `./assets/css/colors/${btnTheme}.css`;
+      const currentTheme = this.linkTheme?.getAttribute('href');
+      if(btnThemeUrl === currentTheme){
+        element.classList.add('working');
+      }
+    });
+
+  }
+}
