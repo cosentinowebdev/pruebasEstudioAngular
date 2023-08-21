@@ -33,7 +33,8 @@
                                 <li>
                                     <a 
                                     [routerLink]="[item.url]" 
-                                    routerLinkActive="router-link-active" > 
+                                    routerLinkActive="active"
+                                    [routerLinkActiveOptions]=" { exact : true}" > 
                                         {{item.titulo}} 
                                     </a>
                                 </li>

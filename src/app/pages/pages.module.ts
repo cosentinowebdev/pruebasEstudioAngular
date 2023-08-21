@@ -14,6 +14,7 @@ import { PagesComponent } from './pages.component';
 import { RouterOutlet } from '@angular/router';
 import { AccountSettingsComponent } from './account-settings/account-settings.component';
 import { PromesasComponent } from './promesas/promesas.component';
+import { RxjsComponent } from './rxjs/rxjs.component';
 
 // import { AppRoutingModule } from '../app-routing.module';
 
@@ -27,6 +28,7 @@ import { PromesasComponent } from './promesas/promesas.component';
     PagesComponent,
     AccountSettingsComponent,
     PromesasComponent,
+    RxjsComponent,
   ],
   exports:[
     DashboardComponent,
