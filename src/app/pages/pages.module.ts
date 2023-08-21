@@ -13,6 +13,7 @@ import { PagesComponent } from './pages.component';
 
 import { RouterOutlet } from '@angular/router';
 import { AccountSettingsComponent } from './account-settings/account-settings.component';
+import { PromesasComponent } from './promesas/promesas.component';
 
 // import { AppRoutingModule } from '../app-routing.module';
 
@@ -25,6 +26,7 @@ import { AccountSettingsComponent } from './account-settings/account-settings.co
     Graficas1Component,
     PagesComponent,
     AccountSettingsComponent,
+    PromesasComponent,
   ],
   exports:[
     DashboardComponent,
